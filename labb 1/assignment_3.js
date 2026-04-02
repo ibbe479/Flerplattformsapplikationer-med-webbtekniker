@@ -5,8 +5,8 @@ function main() {
     console.log(MNG1.toUpperCase());
 
     let mng2 = "JavaScript: The Good Parts"; 
-    let MNG2 = mng2.substring(16,25);
-    console.log(MNG2.toLocaleLowerCase());
+    let MNG2 = mng2.substring(16,26);
+    console.log(MNG2.toLowerCase());
 
     let mng3 = "JavaScript: The Good Parts";
     let MNG3 = mng3.substring(16,20);
