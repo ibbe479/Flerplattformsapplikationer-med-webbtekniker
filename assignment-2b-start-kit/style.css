@@ -12,7 +12,7 @@ body {
     "nav"
     "main"
     "footer";
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr 
 }
 header {
     grid-area: header;
@@ -23,7 +23,7 @@ header {
 }
 
 nav{
-    grid-area: "nav";
+    grid-area: nav;
     background-color: #333;
     display: flex;
     flex-direction: row;
@@ -54,4 +54,97 @@ footer {
     grid-area: footer;
     
 }
-/* Er CSS-kod nedan */
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+figure {
+    margin: 20px auto;
+    width: 30%;
+    border: black solid 1px;
+    padding: 5px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+figcaption {
+    text-align: center;
+    color: black;
+    max-width: max-content;
+    margin: auto;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    #container {
+        grid-template-areas:
+        "header main"
+        "nav main"
+        "footer main";
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 80% 1fr;
+    }
+    body{
+        margin: 0%;
+        max-width: 98%;
+    }
+    header{
+        grid-area: header ;
+    }
+    nav{
+        grid-area: nav ;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    nav a{
+        margin: 0;
+        border-bottom: black solid 1px;
+    }
+    figure{
+        width: 45%;
+    }
+    main{
+        grid-area: main ;
+    }
+    footer{
+        grid-area: footer ;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    nav{
+        display: flex;
+        flex-direction:column ;
+        gap: 0;
+    }
+    nav a{
+        text-align: center;
+        border-bottom: black solid 1px;
+    }
+   
+    
+    figure{
+        width: 100%;
+    }
+}
