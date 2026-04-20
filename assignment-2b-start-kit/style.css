@@ -20,6 +20,8 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 nav{
@@ -69,7 +71,7 @@ figure {
     padding: 5px;
 }
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 figcaption {
