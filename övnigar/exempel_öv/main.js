@@ -53,8 +53,24 @@ hellobtn.onclick=sayhello
 
 //eventhandler i js genom en anonym funktion
 /*
-*/
 const helo= document.getElementById("hello-btn")
 helo.onclick = function(){
     alert("hello world 2 ")
 }
+*/
+
+//eventlistener med en definerad funktion
+/* 
+const btn = document.getElementById("hello-btn")
+
+function btnhello(){
+    alert("hej")
+}
+btn.addEventListener("click",btnhello,false)
+*/
+
+// eventlistener med en anonym funktion 
+/*
+const btn = document.getElementById("hello-btn")
+btn.addEventListener("click",function(){alert("hello world")},false)
+*/
