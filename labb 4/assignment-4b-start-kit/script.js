@@ -38,12 +38,24 @@ function watchPosition(){
     function success(position) {
         // Ta en titt i er webbkonsol och se vad den innehåller.
         console.log("This is our position: ", position);
+        const speed = position.coords.speed
         $("#longitude").text(position.coords.longitude);
         $("#latitude").text(position.coords.latitude);
         $("#accuracy").text(position.coords.accuracy);
         $("#altitude").text(position.coords.altitude);
         $("#accuracy-altitude").text(position.coords.altitudeAccuracy);
-        $("#speed").text(position.coords.speed);
+        $("#speed").text(speed);
+        const speedColor = $("#speed-container")
+        if (speed < 18){
+            speedColor.css("background-color", "red")
+        }
+        else if ( speed > 18  && speed < 36 ){
+            speedColor.css("background-color", "yellow")
+        }
+        else if (speed > 36){
+            speedColor.css("background-color", "green")
+
+        }
     }
 
     function error(err) {
